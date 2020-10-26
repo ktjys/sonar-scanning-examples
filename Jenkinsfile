@@ -8,6 +8,7 @@ pipeline {
       steps {
         withSonarQubeEnv('sonar') {
           sh '''cd sonarqube-scanner-gradle
+pwd
 gradle sonarqube'''
         }
 
