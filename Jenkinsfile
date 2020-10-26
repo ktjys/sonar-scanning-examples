@@ -9,7 +9,7 @@ pipeline {
         withSonarQubeEnv('sonar') {
           sh '''cd sonarqube-scanner-gradle
 pwd
-gradle sonarqube'''
+gradle -Dsonar.host.url=https://sonar.acldevsre.de sonarqube'''
         }
 
       }
