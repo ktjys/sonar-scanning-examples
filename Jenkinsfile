@@ -8,7 +8,7 @@ pipeline {
       steps {
         withSonarQubeEnv('sonar') {
           sh '''cd sonarqube-scanner-gradle
-gradle -Dsonar.login=ed4d9996ab4948f15e756be7ab126bae0d6fe881 -Dsonar.projectKey=dodt:sonarqube-scanner-gradle sonarqube'''
+gradle -Dsonar.login=ed4d9996ab4948f15e756be7ab126bae0d6fe881 sonarqube'''
         }
 
       }
