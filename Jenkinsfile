@@ -14,5 +14,14 @@ gradle -Dsonar.login=ed4d9996ab4948f15e756be7ab126bae0d6fe881 -Dsonar.projectKey
       }
     }
 
+    stage('Quality Gate') {
+      steps {
+        timeout(time: 1, unit: 'HOURS') {
+          waitForQualityGate true
+        }
+
+      }
+    }
+
   }
 }
