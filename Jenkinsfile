@@ -9,7 +9,7 @@ pipeline {
         withSonarQubeEnv('sonar') {
           sh '''cd sonarqube-scanner-gradle
 pwd
-gradle -Dsonar.host.url=https://sonar.acldevsre.de -Dsonar.login=de9bd89410120c3e08f5f54dabc27d34816e88e8 -Dsonar.projectKey=sonarqube-scanner-gradle sonarqube --debug'''
+gradle -Dsonar.host.url=https://sonar.acldevsre.de -Dsonar.login=ed4d9996ab4948f15e756be7ab126bae0d6fe881 -Dsonar.projectKey=dodt:sonarqube-scanner-gradle sonarqube'''
         }
 
       }
