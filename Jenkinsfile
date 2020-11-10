@@ -3,9 +3,9 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        withSonarQubeEnv('sonar') {
+        withSonarQubeEnv(installationName: 'sonar', credentialsId: 'sonar') {
           sh '''cd sonarqube-scanner-gradle
-./gradlew -Dsonar.login=ed4d9996ab4948f15e756be7ab126bae0d6fe881 sonarqube'''
+./gradlew sonarqube'''
         }
 
       }
